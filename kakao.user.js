@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       decay42
-// @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @require      https://greasyfork.org/scripts/31940-waitforkeyelements/code/waitForKeyElements.js?version=209282
 // @match        https://www.kakao-karten.de/*
 // @include      https://www.kakao-karten.de/*
 // @icon         https://www.kakao-karten.de/mobile.png
@@ -12,7 +12,7 @@
 // ==/UserScript==
 /*global waitForKeyElements */
 
-(function() {
+(function () {
   'use strict';
   waitForKeyElements('#canvas', kakaoFunction);
 
