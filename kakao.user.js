@@ -2,7 +2,7 @@
 // @name         KaKAO Tag Hider
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  Script hiding images based on tags loaded asynchronously
 // @author       decay42
 // @require      https://greasyfork.org/scripts/31940-waitforkeyelements/code/waitForKeyElements.js?version=209282
 // @match        https://www.kakao-karten.de/*
