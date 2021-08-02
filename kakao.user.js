@@ -13,7 +13,7 @@
 /*global waitForKeyElements */
 
 // ADD BANNED TAGS HERE
-const bannedTags = ['sta', 'add more here'];
+const bannedTags = ['sta', 'aquarell', '...'];
 
 (function () {
   'use strict';
