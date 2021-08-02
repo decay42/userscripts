@@ -12,11 +12,12 @@
 // ==/UserScript==
 /*global waitForKeyElements */
 
+// ADD BANNED TAGS HERE
+const bannedTags = ['sta', 'add more here'];
+
 (function () {
   'use strict';
   waitForKeyElements('#canvas', kakaoFunction);
-
-  const bannedTags = ['Fanart', 'add more here']
 
   function kakaoFunction() {
     const karten = document.querySelectorAll('div.gallery a');
@@ -25,9 +26,7 @@
       fetch(karte.href).then(res => res.text()).then(text => {
         const el = document.createElement('html');
         el.innerHTML = text;
-        const details = el.querySelector("#details");
-        if (!details) return;
-        const tags = details.innerText.split('\n').filter(x => x.includes('‣')).map(x => x.replace(/‣\s+/, ''));
+        const tags = Array.from(el.querySelectorAll("div.tag a").values()).map(t => t.innerText);
         if (bannedTags.some(bannedTag => tags.includes(bannedTag))) {
           image.style.visibility = 'hidden';
           image.style.height = '0';
